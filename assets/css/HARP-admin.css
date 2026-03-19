@@ -1,0 +1,402 @@
+/* University Fault Reporter — Admin Styles */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+.HARP-admin-wrap {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  padding: 24px 16px 48px;
+  max-width: 1200px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Header ──────────────────────────────────────────────────────────────── */
+.HARP-admin-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.HARP-admin-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  color: #0f2246 !important;
+  margin: 0 0 4px !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+.HARP-admin-subtitle {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0;
+}
+
+.HARP-back-link {
+  display: inline-block;
+  color: #2563eb;
+  font-size: 13px;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+.HARP-back-link:hover { text-decoration: underline; color: #1d4ed8; }
+
+/* ── Stats Grid ──────────────────────────────────────────────────────────── */
+.HARP-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.HARP-stat-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  border-left: 4px solid var(--stat-color);
+  transition: box-shadow 0.2s;
+}
+.HARP-stat-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+
+.HARP-stat-icon { font-size: 22px; margin-bottom: 8px; }
+.HARP-stat-value { font-size: 32px; font-weight: 700; color: var(--stat-color); line-height: 1; margin-bottom: 4px; }
+.HARP-stat-label { font-size: 13px; color: #6b7280; font-weight: 500; }
+
+/* ── Filters ─────────────────────────────────────────────────────────────── */
+.HARP-admin-filters {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.HARP-admin-search {
+  flex: 1;
+  min-width: 200px;
+  padding: 9px 14px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+}
+.HARP-admin-search:focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+
+.HARP-admin-select {
+  padding: 9px 14px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #fff;
+  outline: none;
+  cursor: pointer;
+}
+
+/* ── Table ───────────────────────────────────────────────────────────────── */
+.HARP-table-wrap {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.HARP-admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.HARP-admin-table th {
+  text-align: left;
+  padding: 12px 16px;
+  background: #f8fafc;
+  color: #374151;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1.5px solid #e5e7eb;
+}
+
+.HARP-admin-table td {
+  padding: 13px 16px;
+  border-bottom: 1px solid #f3f4f6;
+  color: #374151;
+  vertical-align: middle;
+}
+
+.HARP-admin-table tr:last-child td { border-bottom: none; }
+.HARP-admin-table tr:hover td { background: #f9fafb; }
+
+/* ── Badges ──────────────────────────────────────────────────────────────── */
+.HARP-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.HARP-badge-red    { background: #fef2f2; color: #dc2626; }
+.HARP-badge-orange { background: #fff7ed; color: #ea580c; }
+.HARP-badge-yellow { background: #fefce8; color: #854d0e; }
+.HARP-badge-green  { background: #f0fdf4; color: #166534; }
+.HARP-badge-blue   { background: #eff6ff; color: #1d4ed8; }
+.HARP-badge-gray   { background: #f3f4f6; color: #374151; }
+
+/* ── Code ────────────────────────────────────────────────────────────────── */
+.HARP-code {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  background: #f3f4f6;
+  padding: 3px 8px;
+  border-radius: 6px;
+  color: #0f2246;
+}
+
+/* ── Buttons ─────────────────────────────────────────────────────────────── */
+.HARP-admin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.HARP-admin-btn-primary {
+  background: linear-gradient(135deg, #0f2246, #1d4ed8);
+  color: #fff;
+}
+.HARP-admin-btn-primary:hover { opacity: 0.9; color: #fff; }
+
+.HARP-admin-btn-outline {
+  background: transparent;
+  color: #374151;
+  border: 1.5px solid #d1d5db;
+}
+.HARP-admin-btn-outline:hover { background: #f3f4f6; color: #111827; }
+
+.HARP-admin-btn-danger {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+.HARP-admin-btn-danger:hover { background: #fee2e2; }
+
+.HARP-admin-btn-sm { padding: 5px 12px; font-size: 12px; }
+
+.HARP-btn-full { width: 100%; justify-content: center; }
+
+/* ── Empty state ─────────────────────────────────────────────────────────── */
+.HARP-admin-empty {
+  text-align: center;
+  padding: 60px 40px;
+}
+.HARP-empty-icon { font-size: 48px; display: block; margin-bottom: 16px; }
+.HARP-admin-empty h3 { font-size: 18px; color: #374151; margin: 0 0 8px; }
+.HARP-admin-empty p { color: #9ca3af; font-size: 14px; margin: 0; }
+
+/* ── Single report layout ────────────────────────────────────────────────── */
+.HARP-admin-two-col {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 20px;
+  align-items: start;
+}
+
+/* ── Admin card ──────────────────────────────────────────────────────────── */
+.HARP-admin-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.HARP-admin-card-title {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #0f2246 !important;
+  margin: 0 0 18px !important;
+  padding-bottom: 12px !important;
+  border-bottom: 1.5px solid #f3f4f6 !important;
+}
+
+/* ── Detail table ────────────────────────────────────────────────────────── */
+.HARP-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.HARP-detail-table td {
+  padding: 10px 0;
+  border-bottom: 1px solid #f3f4f6;
+  vertical-align: top;
+}
+.HARP-detail-table td:first-child {
+  width: 140px;
+  font-weight: 600;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* ── Description ─────────────────────────────────────────────────────────── */
+.HARP-description-text {
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.7;
+  margin: 0;
+  background: #f9fafb;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+/* ── Evidence preview ────────────────────────────────────────────────────── */
+.HARP-evidence-preview {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 10px;
+  display: block;
+}
+
+/* ── Admin comments ──────────────────────────────────────────────────────── */
+.HARP-admin-comments { margin-bottom: 18px; }
+
+.HARP-admin-comment {
+  background: #f8fafc;
+  border-left: 3px solid #1d4ed8;
+  border-radius: 0 8px 8px 0;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+}
+.HARP-admin-comment-meta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.HARP-admin-comment-author { font-size: 13px; font-weight: 700; color: #0f2246; }
+.HARP-admin-comment-date   { font-size: 12px; color: #9ca3af; }
+.HARP-admin-comment p { font-size: 14px; color: #374151; margin: 0; line-height: 1.6; }
+
+.HARP-no-comments-admin { font-size: 13px; color: #9ca3af; text-align: center; padding: 14px; }
+
+.HARP-add-comment-form { border-top: 1.5px solid #f3f4f6; padding-top: 16px; }
+
+/* ── Admin form elements ─────────────────────────────────────────────────── */
+.HARP-admin-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 4px;
+}
+.HARP-admin-hint {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 0 0 6px;
+}
+.HARP-admin-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #374151;
+  resize: vertical;
+  outline: none;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+.HARP-admin-textarea:focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+
+.HARP-admin-input {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #374151;
+  outline: none;
+  box-sizing: border-box;
+}
+.HARP-admin-input:focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+
+/* ── Status messages ─────────────────────────────────────────────────────── */
+.HARP-admin-msg {
+  margin-top: 8px;
+  font-size: 13px;
+  min-height: 20px;
+}
+.HARP-admin-msg.success { color: #16a34a; }
+.HARP-admin-msg.error   { color: #dc2626; }
+
+/* ── Quick info ──────────────────────────────────────────────────────────── */
+.HARP-quick-info { font-size: 14px; }
+.HARP-qi-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+.HARP-qi-row:last-child { border-bottom: none; }
+.HARP-qi-row span:first-child { color: #6b7280; font-size: 13px; }
+.HARP-qi-row span:last-child  { font-weight: 600; color: #111827; }
+
+/* ── Email note ──────────────────────────────────────────────────────────── */
+.HARP-email-note { font-size: 11px; opacity: 0.75; }
+
+/* ── Shortcode items ─────────────────────────────────────────────────────── */
+.HARP-shortcode-item {
+  padding: 14px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+.HARP-shortcode-item:last-child { border-bottom: none; }
+.HARP-shortcode-item label { display: block; font-size: 13px; color: #6b7280; margin-bottom: 6px; }
+.HARP-shortcode-item code {
+  display: inline-block;
+  background: #f3f4f6;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #0f2246;
+  margin-right: 8px;
+  font-family: monospace;
+}
+
+/* ── Field group ─────────────────────────────────────────────────────────── */
+.HARP-field-group { margin-bottom: 18px; }
+
+/* ── Settings grid ───────────────────────────────────────────────────────── */
+.HARP-settings-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 20px;
+  align-items: start;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .HARP-stats-grid      { grid-template-columns: repeat(2, 1fr); }
+  .HARP-admin-two-col   { grid-template-columns: 1fr; }
+  .HARP-settings-grid   { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .HARP-stats-grid { grid-template-columns: 1fr 1fr; }
+}
